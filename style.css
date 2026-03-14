@@ -1,0 +1,915 @@
+/* =================== BASE =================== */
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	color: #333;
+}
+
+/* NAVBAR */
+.nav {
+  background: #222;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-family: "Idiqlat", serif;
+}
+
+.logo img {
+  width: 190px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Menú desktop */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #25D366;
+}
+
+/* Hamburguesa */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  background: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  display: block;
+}
+
+/* =================== HERO =================== */
+.hero {
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(hero.jpeg) center/cover no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	padding: 20px;
+}
+
+.hero h1 {
+	font-size: 48px;
+	max-width: 800px;
+}
+
+.hero p {
+	font-size: 20px;
+	margin: 20px 0;
+}
+
+/* =================== WHATSAPP / INSTAGRAM =================== */
+.whatsapp-container {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	z-index: 999;
+}
+
+.whatsapp-float {
+	background: #25D366;
+	border: none;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+	transition: 0.3s;
+}
+
+.whatsapp-float img {
+	width: 35px;
+	height: 35px;
+}
+
+.whatsapp-float:hover {
+	transform: scale(1.1);
+}
+
+.instagram-float img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+	transition: 0.3s;
+}
+
+.instagram-float img:hover {
+	transform: scale(1.1);
+}
+
+.whatsapp-options {
+	display: none;
+	flex-direction: column;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.whatsapp-options a {
+	padding: 12px 18px;
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+	transition: 0.2s;
+}
+
+.whatsapp-options a:hover {
+	background: #f5f5f5;
+}
+
+.descripcion-inicio {
+	padding: 60px 20px;
+	background: #f9f9f9;
+	text-align: center;
+}
+
+.descripcion-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.descripcion-inicio h2 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	color: #222;
+}
+
+.descripcion-inicio p {
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 30px;
+	color: #555;
+}
+
+/* Usamos el mismo estilo de botón que definimos para el hero */
+.descripcion-inicio .btn-servicios {
+	display: inline-block;
+	padding: 12px 25px;
+	background-color: #ff7f50;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 8px;
+	transition: background 0.3s, transform 0.2s;
+}
+
+.descripcion-inicio .btn-servicios:hover {
+	background-color: #ff6347;
+	transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.beneficios {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 30px;
+	padding: 60px 20px;
+	background: #f4f4f4;
+	text-align: center;
+}
+
+/* Cada tarjeta de beneficio */
+.beneficio-card {
+	background: white;
+	border-radius: 12px;
+	padding: 25px 15px;
+	box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.beneficio-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.beneficio-card img {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 15px;
+}
+
+.beneficio-card h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	color: #222;
+}
+
+.beneficio-card p {
+	font-size: 16px;
+	color: #555;
+	line-height: 1.5;
+}
+
+/* TITULO PAGINA */
+.titulo-pagina {
+	background: #f5f5f5;
+	text-align: center;
+	padding: 70px 20px;
+}
+
+.titulo-pagina h1 {
+	font-size: 42px;
+	margin-bottom: 10px;
+}
+
+.titulo-pagina p {
+	font-size: 18px;
+	color: #666;
+}
+
+/* SERVICIOS */
+.servicios {
+	padding: 60px 20px;
+}
+
+.servicios h2 {
+	text-align: center;
+	font-size: 32px;
+	margin-bottom: 40px;
+}
+
+/* GRID */
+.servicios-grid {
+	max-width: 1200px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 30px;
+}
+
+/* TARJETAS */
+.servicio {
+	background: white;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	transition: 0.3s;
+	text-align: center;
+}
+
+.servicio:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.servicio img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.servicio h3 {
+	margin: 15px 0 10px;
+	font-size: 20px;
+}
+
+.servicio p {
+	padding: 0 20px 20px;
+	color: #555;
+}
+
+/* GALERIA */
+.titulo-pagina {
+	text-align: center;
+	padding: 100px 20px 40px;
+	max-width: 900px;
+	margin: auto;
+}
+
+.carousel {
+	max-width: 1100px;
+	margin: 0 auto 60px;
+}
+
+.carousel img, .carousel video {
+	height: 500px;
+	object-fit: cover;
+}
+
+.miniaturas {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 10px;
+	max-width: 1100px;
+	margin: 20px auto 60px;
+	padding: 0 20px;
+}
+
+.miniaturas img, .miniaturas video {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	background: #eee;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.miniaturas img:hover, .miniaturas video:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.miniaturas img, .miniaturas video {
+	transition: transform 0.3s;
+}
+
+/* RESERVAS */
+.hero {
+	background: url('hero.jpeg') center/cover no-repeat;
+	color: white;
+	text-align: center;
+	padding: 50px 30px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 0;
+}
+
+.hero * {
+	position: relative;
+	z-index: 1;
+}
+
+.formulario {
+	max-width: 500px;
+	margin: auto;
+	background: white;
+	padding: 25px;
+	margin-top: 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+input, select {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button {
+	margin-top: 20px;
+	width: 100%;
+	padding: 12px;
+	background: #2c7a3f;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #1e5c2f;
+}
+
+.flatpickr-calendar{
+width:100%;
+margin-top:15px;
+}
+
+.flatpickr-day.disabled{
+background:#ff4d4d;
+color:white;
+}
+
+.flatpickr-day.selected{
+background:#2c7a3f;
+color:white;
+}
+
+.flatpickr-day.today{
+border:2px solid #2c7a3f;
+}
+
+.calendario{
+background:#e6e6e6;
+padding:20px;
+border-radius:10px;
+}
+
+.calendario-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#dcdcdc;
+padding:10px 15px;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+#mesActual {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.flecha{
+background:none;
+border:none;
+font-size:22px;
+cursor:pointer;
+}
+
+#diasSemana{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+font-weight:bold;
+margin-top:10px;
+}
+
+#dias{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:5px;
+margin-top:10px;
+}
+
+.dia{
+padding:10px;
+background:#f0f0f0;
+cursor:pointer;
+border-radius:5px;
+}
+
+.dia:hover{
+background:#ddd;
+}
+
+.ocupado{
+background:red;
+color:white;
+pointer-events:none;
+}
+
+.medio{
+background:orange;
+color:white;
+}
+
+.seleccionado{
+background:#2c7a3f;
+color:white;
+}
+
+.horarios{
+display:flex;
+gap:15px;
+margin-top:10px;
+flex-wrap:wrap;
+}
+
+.horarioBtn{
+padding:12px 20px;
+border:none;
+border-radius:8px;
+background:#f0f0f0;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+.horarioBtn:hover{
+background:black;
+}
+
+.horarioBtn.activo{
+background:#2c7a3f;
+color:white;
+}
+
+.personasOpciones{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.personaBtn{
+padding:10px 16px;
+border:none;
+border-radius:8px;
+background:#f0f0f0;
+cursor:pointer;
+font-size:15px;
+transition:0.3s;
+}
+
+.personaBtn:hover{
+background:black;
+}
+
+.personaBtn.activo{
+background:#2c7a3f;
+color:white;
+}
+
+.campo {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.campo label {
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.campo input {
+	padding: 10px;
+	font-size: 16px;
+	border: 2px solid #ccc;
+	border-radius: 8px;
+	transition: border-color 0.3s;
+}
+
+.campo input:focus {
+	border-color: #007bff;
+	outline: none;
+}
+
+.pagos {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.btnPago {
+	background: #009ee3;
+	color: white;
+	padding: 12px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+}
+
+.btnEfectivo {
+	background: #25D366;
+	color: white;
+	padding: 12px;
+	border-radius: 8px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.efectivoOpciones {
+	display: none;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 10px;
+}
+
+.efectivoOpciones a {
+	background: #eaeaea;
+	padding: 10px;
+	border-radius: 6px;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+}
+
+#btnReserva {
+	padding: 12px 25px;
+	font-size: 16px;
+	border: none;
+	border-radius: 8px;
+	background: #2c7a3f;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#btnReserva:disabled {
+	background: #999;
+	cursor: not-allowed;
+}
+
+#mensaje {
+	text-align: center;
+	margin-top: 15px;
+}
+
+/* =================== CONTACTO / UBICACIÓN =================== */
+.contacto, .ubicacion {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.contacto {
+  background: #f7f7f7;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.campo label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.campo input, .campo textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo input:focus, .campo textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  outline: none;
+}
+
+button, #btnContacto {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover, #btnContacto:hover {
+  background: #444;
+}
+
+/* WhatsApp */
+.btn-wsp {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 12px 20px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-wsp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Mapa */
+.ubicacion iframe {
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+  height: 350px;
+}
+
+/* FOOTER */
+.footer {
+	background: #222;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+	 /* Mostrar hamburguesa */
+  .menu-icon {
+    display: flex;
+  }
+
+  /* Menú móvil */
+  .menu {
+    position: absolute;
+    top: 114px;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: #222;
+    flex-direction: column;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    z-index: 10;
+  }
+
+  .menu a {
+    font-size: 30px;
+    padding: 10px 0;
+  }
+
+  .menu.active {
+    max-height: 1000px;
+  }
+
+	 /* Ajustes generales */
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+	.hero h1 {
+		font-size: 30px;
+	}
+
+	.whatsapp-container {
+    bottom: 15px;
+    right: 15px;
+    gap: 8px;
+  }
+
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+  }
+
+  .whatsapp-float img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .instagram-float img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .whatsapp-options a {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+
+	.descripcion-inicio h2 {
+		font-size: 26px;
+	}
+
+	.descripcion-inicio p {
+		font-size: 16px;
+	}
+
+	.descripcion-inicio .btn-servicios {
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+
+	.beneficio-card img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.beneficio-card h3 {
+		font-size: 18px;
+	}
+
+	.beneficio-card p {
+		font-size: 14px;
+	}
+
+	.carousel img, .carousel video{
+		height:300px;
+	}
+	
+	.miniaturas{
+		grid-template-columns:repeat(3,1fr);
+	}
+
+	.carousel img {
+		height: 300px;
+	}
+
+	.carousel video {
+		height: 300px;
+	}
+
+	.formulario {
+		padding: 20px;
+		margin-top: 20px;
+	}
+
+	.campo input {
+		font-size: 14px;
+		padding: 8px;
+	}
+
+	.dia{
+		padding:8px;
+		font-size:14px;
+	}
+
+	.calendario{
+		padding:15px;
+	}
+
+	.horarioBtn{
+		font-size:14px;
+		padding:10px 15px;
+	}
+
+	.personaBtn{
+		font-size:14px;
+		padding:8px 12px;
+	}
+
+	  .contacto, .ubicacion {
+    width: 90%;
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 15px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .btn-wsp, #btnContacto {
+    width: 100%;
+  }
+
+  .ubicacion iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
+

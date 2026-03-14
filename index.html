@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Quinta Mis 4 Amores en El Pato, Buenos Aires. Alquiler de quinta para cumpleaños, eventos, reuniones y fiestas. Consultá disponibilidad y reservá tu fecha.">
+	<meta name="keywords" content="quinta en el pato, alquiler quinta el pato, quinta para eventos buenos aires, quinta para cumpleaños, quinta para fiestas el pato">
+	<meta name="author" content="Quinta Mis 4 Amores">
+	<meta property="og:title" content="Quinta Mis 4 Amores - Alquiler para Eventos">
+	<meta property="og:description" content="Alquiler de quinta en El Pato para cumpleaños, fiestas y eventos. Consultá disponibilidad.">
+	<meta property="og:image" content="foto1.jpeg">
+	<meta property="og:type" content="website">
+	<title>Quinta Mis 4 Amores | Alquiler de Quinta en El Pato</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="icono.jpg">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Idiqlat:wght@200;300;400&display=swap');
+	</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="icono.png" alt="Logo">
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menú -->
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="reservas.html">Reservas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+	<h1>Disfrutá momentos inolvidable en Quinta<br> "Mis 4 amores"</h1>
+	<p>Ideal para eventos, cumpleaños y reuniones familiares.</p>
+
+</section>
+
+<div class="whatsapp-container">
+	
+	<div class="whatsapp-options" id="whatsappOptions">
+		<a href="https://wa.me/5491563834135" target="_blank">WhatsApp de Leo</a>
+		<a href="https://wa.me/5491533781543" target="_blank">WhatsApp de Mariana</a>
+	</div>
+
+	<button class="whatsapp-float" onclick="toggleWhatsApp()">
+		<img src="whatsapp.png" alt="WhatsApp">
+	</button>
+
+	<a href="https://instagram.com/mis_cuatro.amores" target="_blank" class="instagram-float">
+		<img src="instagram.png" alt="Instagram">
+	</a>
+</div>
+
+<script>
+	function toggleWhatsApp() {
+		const menu = document.getElementById("whatsappOptions");
+
+		if(menu.style.display === "flex") {
+			menu.style.display = "none";
+		}else {
+			menu.style.display = "flex";
+		}
+	}
+</script>
+
+<section class="descripcion-inicio">
+	<div class="descripcion-content">
+		<h2>Bienvenido a Quinta "Mis 4 amores"</h2>
+		<p>Un espacio ideal para celebrar cumpleaños, reuniones familiares y eventos especiales. Disfrutá de nuestra piscina, quincho y amplios jardines en un ambiente cómodo y seguro.</p>
+		<a href="servicios.html" class="btn-servicios">Conocé todos nuestros servicios</a>
+	</div>
+</section>
+
+<section class="beneficios">
+	<div class="beneficio-card">
+		<img src="piscina.png" alt="piscina">
+		<h3>Piscina amplia</h3>
+		<p>Disfrutá de nuestra pileta para grandes y chicos en un espacio seguro.</p>
+	</div>
+	<div class="beneficio-card">
+		<img src="parrilla-de-ladrillo.png" alt="quincho">
+		<h3>Quincho equipado</h3>
+		<p>Parrilla y espacio techado para tus eventos familiares y reuniones.</p>
+	</div>
+	<div class="beneficio-card">
+		<img src="ecologia.png" alt="Espacio verde">
+		<h3>Espacios verdes</h3>
+		<p>Amplios jardines para disfrutar del aire libre y la naturaleza.</p>
+	</div>
+	<div class="beneficio-card">
+		<img src="fiesta.png" alt="Eventos">
+		<h3>Ideal para eventos</h3>
+		<p>Celebraciones de cumpleaños, reuniones y momentos inolvidables.</p>
+	</div>
+</section>
+
+<script>
+// Seleccionamos elementos
+const menuBtn = document.querySelector(".menu-icon");
+const menu = document.querySelector(".menu");
+
+// Toggle para abrir/cerrar menú
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+</script>
+
+<footer class="footer">
+	<p>© 2026 Quinta Mis 4 Amores - Todos los derechos reservados</p>
+	<p>El Pato, Provincia de Buenos Aires</p>
+</footer>
+</body>
+</html>

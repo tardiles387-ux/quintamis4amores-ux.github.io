@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Servicios - Quinta Mis 4 Amores | Eventos y Cumpleaños</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Quinta Mis 4 Amores en El Pato, Buenos Aires. Alquiler de quinta para cumpleaños, eventos, reuniones y fiestas. Consultá disponibilidad y reservá tu fecha.">
+		<meta name="keywords" content="quinta en el pato, alquiler quinta el pato, quinta para eventos buenos aires, quinta para cumpleaños, quinta para fiestas el pato">
+		<meta name="author" content="Quinta Mis 4 Amores">
+		<meta property="og:title" content="Quinta Mis 4 Amores - Alquiler para Eventos">
+		<meta property="og:description" content="Alquiler de quinta en El Pato para cumpleaños, fiestas y eventos. Consultá disponibilidad.">
+		<meta property="og:image" content="foto1.jpeg">
+		<meta property="og:type" content="website">
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="icono.jpg">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Idiqlat:wght@200;300;400$display=swap');
+		</style>
+	</head>
+	<body>
+		<header>
+  			<nav class="nav">
+
+    			<!-- Logo -->
+    			<div class="logo">
+      				<img src="icono.png" alt="Logo">
+    			</div>
+
+    			<!-- Botón hamburguesa -->
+    			<div class="menu-icon">
+      				<span></span>
+      				<span></span>
+      				<span></span>
+    			</div>
+
+    			<!-- Menú -->
+    			<ul class="menu">
+      				<li><a href="index.html">Inicio</a></li>
+      				<li><a href="servicios.html">Servicios</a></li>
+      				<li><a href="galeria.html">Galería</a></li>
+      				<li><a href="reservas.html">Reservas</a></li>
+      				<li><a href="contacto.html">Contacto</a></li>
+    			</ul>
+
+  			</nav>
+		</header>
+
+		<section class="titulo-pagina">
+			
+			<h1>Servicios y comodidades</h1>
+			<p>Todo lo que necesitás para disfrutar un día inolvidable.</p>
+
+		</section>
+
+		<section class="servicios">
+			
+			<h2>Nuestros servicios</h2>
+
+			<div class="servicios-grid">
+				
+				<div class="servicio">
+					
+					<img src="foto5.jpeg" alt="Piscina">
+
+					<h3>🏊 Piscina</h3>
+
+					<p>Piscina amplia ideal para disfrutar del verano y refrescarse con familia o amigos.</p>
+
+				</div>
+
+				<div class="servicio">
+					
+					<img src="foto9.jpeg" alt="Quincho">
+
+					<h3>🔥 Quincho con parrilla</h3>
+
+					<p>Gran quincho con parrilla perfecto para asados y reuniones.</p>
+
+				</div>
+
+				<div class="servicio">
+					
+					<img src="foto1.jpeg" alt="Espacio verde">
+
+					<h3>🌳 Espacio verde</h3>
+
+					<p>Amplios jardines naturales para relajarse, jugar o descansar.</p>
+
+				</div>
+
+				<div class="servicio">
+					
+					<img src="foto12.jpeg" alt="Mesas y sillas">
+
+					<h3>🍽 Mesas y sillas</h3>
+
+					<p>Comodidad garantizada para comer y compartir momentos.</p>
+
+				</div>
+
+				<div class="servicio">
+					
+					<img src="foto6.jpeg" alt="Baños">
+
+					<h3>🚻 Baños</h3>
+
+					<p>Baños amplios, limpios y cómodos para todos los invitados.</p>
+
+				</div>
+
+				<div class="servicio">
+					
+					<img src="foto2.jpeg" alt="Juegos">
+
+					<h3>🛝 Juegos para niños</h3>
+
+					<p>Espacios con juegos para que los más chicos se diviertan.</p>
+
+				</div>
+
+				<div class="servicio">
+					
+					<img src="foto14.jpeg" alt="Eventos">
+
+					<h3>🎉 Eventos y cumpleaños</h3>
+
+					<p>El lugar ideal para celebrar cumpleaños, reuniones y eventos.</p>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<div class="whatsapp-container">
+	
+			<div class="whatsapp-options" id="whatsappOptions">
+				<a href="https://wa.me/5491563834135" target="_blank">WhatsApp de Leo</a>
+				<a href="https://wa.me/5491533781543" target="_blank">WhatsApp de Mariana</a>
+			</div>
+
+			<button class="whatsapp-float" onclick="toggleWhatsApp()">
+				<img src="whatsapp.png" alt="WhatsApp">
+			</button>
+
+			<a href="https://instagram.com/mis_cuatro.amores" target="_blank" class="instagram-float">
+				<img src="instagram.png" alt="Instagram">
+			</a>
+		</div>
+
+		<script>
+			function toggleWhatsApp() {
+				const menu = document.getElementById("whatsappOptions");
+
+				if(menu.style.display === "flex") {
+					menu.style.display = "none";
+				}else {
+					menu.style.display = "flex";
+				}
+			}
+		</script>
+
+		<script>
+			// Seleccionamos elementos
+			const menuBtn = document.querySelector(".menu-icon");
+			const menu = document.querySelector(".menu");
+
+			// Toggle para abrir/cerrar menú
+			menuBtn.addEventListener("click", () => {
+  				menu.classList.toggle("active");
+			});
+		</script>
+
+		<footer class="footer">
+			<p>© 2026 Quinta Mis 4 Amores - Todos los derechos reservados</p>
+			<p>El Pato, Provincia de Buenos Aires</p>
+		</footer>
+
+	</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Quinta Mis 4 Amores en El Pato, Buenos Aires. Alquiler de quinta para cumpleaños, eventos, reuniones y fiestas. Consultá disponibilidad y reservá tu fecha.">
+		<meta name="keywords" content="quinta en el pato, alquiler quinta el pato, quinta para eventos buenos aires, quinta para cumpleaños, quinta para fiestas el pato">
+		<meta name="author" content="Quinta Mis 4 Amores">
+		<meta property="og:title" content="Quinta Mis 4 Amores - Alquiler para Eventos">
+		<meta property="og:description" content="Alquiler de quinta en El Pato para cumpleaños, fiestas y eventos. Consultá disponibilidad.">
+		<meta property="og:image" content="foto1.jpeg">
+		<meta property="og:type" content="website">
+		<title>Reservas Quinta | Quinta Mis 4 Amores</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="icono.jpg">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Idiqlat:wght@200;300;400&display=swap');
+		</style>
+	</head>
+	<body>
+
+		<header>
+  			<nav class="nav">
+
+    			<!-- Logo -->
+    			<div class="logo">
+      				<img src="icono.png" alt="Logo">
+    			</div>
+
+    			<!-- Botón hamburguesa -->
+    			<div class="menu-icon">
+      				<span></span>
+      				<span></span>
+      				<span></span>
+    			</div>
+
+    			<!-- Menú -->
+    			<ul class="menu">
+      				<li><a href="index.html">Inicio</a></li>
+      				<li><a href="servicios.html">Servicios</a></li>
+      				<li><a href="galeria.html">Galería</a></li>
+      				<li><a href="reservas.html">Reservas</a></li>
+      				<li><a href="contacto.html">Contacto</a></li>
+    			</ul>
+
+  			</nav>
+		</header>
+
+		<section class="hero">
+			<h1>Reservar Quinta</h1>
+			<p>Completa el formulario para reservar tu evento</p>
+		</section>
+
+		<section class="formulario">
+			
+			<form id="reservaForm">
+				
+				<label>Tipo de evento</label>
+
+				<small>El precio para cualquier evento es de ($15.000 por personas) con una seña del 20%</small>
+
+				<select id="evento">
+					<option value="Cumpleaños">Cumpleaños</option>
+					<option value="Casamiento">Casamiento</option>
+					<option value="Reunión familiar">Reunión familiar</option>
+					<option value="Otro">Otro</option>
+				</select>
+
+				<h2>Seleccionar fecha del evento</h2>
+
+				<div class="calendario">
+
+					<div class="calendario-header">
+    					<button id="prev" class="flecha">❮</button>
+    					<h3 id="mesActual">Marzo 2026</h3>
+    					<button id="next" class="flecha">❯</button>
+					</div>
+
+					<div id="diasSemana">
+    					<div>Dom</div>
+    					<div>Lun</div>
+    					<div>Mar</div>
+    					<div>Mié</div>
+    					<div>Jue</div>
+    					<div>Vie</div>
+    					<div>Sáb</div>
+					</div>
+
+					<div id="dias"></div>
+
+					<input type="hidden" id="fechaSeleccionada">
+
+				</div>
+
+				
+				<label>Seleccionar horario</label>
+
+				<div class="horarios">
+
+					<button type="button" class="horarioBtn" data-horario="dia">
+						🌞 Día (09:00 - 19:00)
+					</button>
+
+					<button type="button" class="horarioBtn" data-horario="noche">
+						🌙 Noche (19:00 - 07:00)
+					</button>
+
+					<!-- Inputs de hora -->
+					<div id="horarioInputs" style="margin-top: 10px; display: none;">
+						<label for="horaInicio">Hora inicio:</label>
+						<input type="time" id="horaInicio">
+
+						<label for="horaFin">Hora fin:</label>
+						<input type="time" id="horaFin">
+					</div>
+
+				</div>
+
+				<input type="hidden" id="horarioSeleccionado">
+
+				<label>Cantidad de personas</label>
+
+				<div class="personasOpciones">
+
+					<small>Capacidad mínima: 20 personas – máxima: 120 personas</small>
+
+					<button type="button" class="personaBtn" data-personas="20">20</button>
+					<button type="button" class="personaBtn" data-personas="40">40</button>
+					<button type="button" class="personaBtn" data-personas="60">60</button>
+					<button type="button" class="personaBtn" data-personas="80">80</button>
+					<button type="button" class="personaBtn" data-personas="100">100</button>
+					<button type="button" class="personaBtn" data-personas="120">120</button>
+
+				</div>
+
+				<input type="hidden" id="personas">
+
+				<div class="campo">
+					<label for="nombre">Nombre completo</label>
+					<input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" autocomplete="name" required>
+				</div>
+
+				<div class="campo">
+					<label for="telefono">Teléfono</label>
+					<input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 2345 6789" autocomplete="tel" required>
+				</div>
+
+				<button id="btnReserva" type="submit">
+					Enviar reserva
+				</button>
+
+			</form>
+
+			<p id="mensaje"></p>
+
+		</section>
+
+		<div class="whatsapp-container">
+	
+			<div class="whatsapp-options" id="whatsappOptions">
+				<a href="https://wa.me/5491563834135" target="_blank">WhatsApp de Leo</a>
+				<a href="https://wa.me/5491533781543" target="_blank">WhatsApp de Mariana</a>
+			</div>
+
+			<button class="whatsapp-float" onclick="toggleWhatsApp()">
+				<img src="whatsapp.png" alt="WhatsApp">
+			</button>
+
+			<a href="https://instagram.com/mis_cuatro.amores" target="_blank" class="instagram-float">
+				<img src="instagram.png" alt="Instagram">
+			</a>
+		</div>
+
+		<script type="module" src="app.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+		<script type="module" src="calendario.js"></script>
+
+
+		<script>
+			const botonesPersonas = document.querySelectorAll(".personaBtn");
+			const inputPersonas = document.getElementById("personas");
+
+			botonesPersonas.forEach(boton => {
+
+			boton.addEventListener("click", () => {
+
+			botonesPersonas.forEach(b => b.classList.remove("activo"));
+
+			boton.classList.add("activo");
+
+			inputPersonas.value = boton.dataset.personas;
+
+			});
+
+			});
+		</script>
+		
+		
+		<script>
+			function toggleWhatsApp() {
+				const menu = document.getElementById("whatsappOptions");
+
+				if(menu.style.display === "flex") {
+					menu.style.display = "none";
+				}else {
+					menu.style.display = "flex";
+				}
+			}
+		</script>
+
+		<script>
+			function toggleEfectivo(){
+
+				const menu = document.getElementById("efectivoOpciones");
+
+				if(menu.style.display === "flex"){
+					menu.style.display = "none";
+				}else{
+					menu.style.display = "flex";
+				}
+			}
+		</script>
+
+		<script>
+			// Seleccionamos elementos
+			const menuBtn = document.querySelector(".menu-icon");
+			const menu = document.querySelector(".menu");
+
+			// Toggle para abrir/cerrar menú
+			menuBtn.addEventListener("click", () => {
+  				menu.classList.toggle("active");
+			});
+		</script>
+		
+		<footer class="footer">
+			<p>© 2026 Quinta Mis 4 Amores - Todos los derechos reservados</p>
+			<p>El Pato, Provincia de Buenos Aires</p>
+		</footer>
+		
+	</body>
+</html>
