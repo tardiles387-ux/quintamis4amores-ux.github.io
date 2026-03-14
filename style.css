@@ -1,8 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 /* =================== BASE =================== */
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
 	color: #333;
+	background: #f4f4f4;
+}
+
+a, button{
+transition:all 0.3s ease;
 }
 
 /* NAVBAR */
@@ -25,7 +38,7 @@ body {
 }
 
 .logo img {
-  width: 190px;
+  width: 100px;
   height: auto;
   object-fit: cover;
 }
@@ -212,7 +225,7 @@ body {
 	background: white;
 	border-radius: 12px;
 	padding: 25px 15px;
-	box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+	box-shadow:0 10px 25px rgba(0,0,0,0.08);
 	transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -308,6 +321,12 @@ body {
 }
 
 /* GALERIA */
+
+img{
+max-width:100%;
+display:block;
+}
+
 .titulo-pagina {
 	text-align: center;
 	padding: 100px 20px 40px;
@@ -404,21 +423,25 @@ input, select {
 	border-radius: 5px;
 }
 
-button {
-	margin-top: 20px;
-	width: 100%;
-	padding: 12px;
-	background: #2c7a3f;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	font-size: 16px;
-	cursor: pointer;
+button{
+margin-top:20px;
+width:100%;
+padding:12px;
+background:#2c7a3f;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+transition:all 0.3s ease;
 }
 
-button:hover {
-	background: #1e5c2f;
+button:hover{
+background:#1e5c2f;
+transform:scale(1.03);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
+
 
 .flatpickr-calendar{
 width:100%;
@@ -743,8 +766,25 @@ button:hover, #btnContacto:hover {
 	margin-top: 50px;
 }
 
+/* ===== ANIMACION SECCIONES ===== */
+section{
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+
 
 	 /* Mostrar hamburguesa */
   .menu-icon {
@@ -754,7 +794,7 @@ button:hover, #btnContacto:hover {
   /* Menú móvil */
   .menu {
     position: absolute;
-    top: 114px;
+    top: 90px;
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
